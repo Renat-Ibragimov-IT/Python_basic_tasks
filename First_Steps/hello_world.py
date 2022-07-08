@@ -1,6 +1,6 @@
 # Task: write a program that greets the user by displaying the world "Hello",
 # entered username and punctuation marks according to the model:
-# "Hello, World!"
+# "Hello, World!".
 
 meeting = input("What's your name?: ")
 print("\033[1m\033[3m\033[33m{}\033[0m".format(f'Hello, my dear {meeting}! ')
