@@ -1,5 +1,5 @@
 # Write a "Show Stars" program. It takes an integer as input.
-# Should print the number of stars:
+# Should print the number of stars.
 # Example:
 # Input number of stars: 8
 # ********
