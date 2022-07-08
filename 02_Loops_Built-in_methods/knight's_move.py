@@ -1,7 +1,7 @@
-# 6. Шахматный конь ходит буквой “Г” — на две клетки по вертикали в любом
-# направлении и на одну клетку по горизонтали, или наоборот.
-# Даны две различные клетки шахматной доски, определите,
-# может ли конь попасть с первой клетки на вторую одним ходом.
+# The chess knight moves two squares vertically in any direction and one square
+# horizontally, or vice versa.
+# Given two different cells of a chessboard, determine
+# whether the knight can get from the first cell to the second in one move.
 
 horizontally = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 vertically = ['1', '2', '3', '4', '5', '6', '7', '8']
