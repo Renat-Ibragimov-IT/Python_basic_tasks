@@ -1,6 +1,6 @@
-# 4. Написать функцию которая заменит в тексте слово на другое.
-# Функция принимает 4 аргумента, изначальная строка, заменяемое слово,
-# новое слово, количество замен, пример:
+# Write a function that will replace a word in the text with another one.
+# The function takes 4 arguments, the original string, the word to be replaced,
+# the new word, the number of replacements, example:
 # fake_string('DC makes good movies, DC makes good comics', 'DC', 'Marvel', 1)
 # -> 'Marvel makes good movies, DC makes good comics'
 # fake_string('DC makes good movies, DC makes good comics', 'DC', 'Marvel', 2)

@@ -1,7 +1,6 @@
 # 2. Написать функцию которая будет частично скрывать e-mail, пример:
 # hide_email(somebody_email@gmail.com) -> em***@**il.com
 
-# user_email = input("Please enter Your email: ")
 import random
 
 user_email = input("Please enter your email: ")
