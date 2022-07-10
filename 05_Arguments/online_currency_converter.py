@@ -1,45 +1,44 @@
-# Написать приложение "Онлайн конвертер валют". =)
-# Приложение спрашивает пользователя:
+# Write an application "Online currency converter".
+# The application asks the user:
 #    currency_from: string
 #    currency_to: string
-# Проверка ввода параметра валют (from, to) должна быть в symbols.json по ключу
-# symbols)
+# Checking the input of the currency parameter (from, to) should be in
+# "symbols.json" by the symbols key)
 #    amount: float
 #    start_date: string
-# (пример. 2020-09-22 если дата не в этом формате, выставлять по-умолчанию дату
-# текущего дня, если дата превышает текущий день, тоже выставляем дату текущего
-# дня)
-#    Если дата меньше или равна текущему дню, то от start_date до текущего идет
-# итерация:
-# Приложение делает GET запрос:
+# (example: 2020-09-22 if the date is not in this format, set the default date
+# of the current day, if the date is greater than the current day, also set the
+# date of the current day)
+# The application makes a GET request:
 # https://api.exchangerate.host/convert
-# Принимаемые параметры from, to, amount, date
+# Accepted parameters from, to, amount, date
 # (from=USD&to=UAH&amount=10000.5&date=2020-09-18)
-# Итоговый вывод должен быть точно в таком же формате (пример если start_date
-# == 2020-09-18):
+# The final output must be in exactly the same format:
 # [['date', 'from', 'to', 'amount', 'rate', 'result'],
 # ['2020-09-18', 'USD', 'UAH', 10000.5, 28.163466, 281648.743085],
 # ['2020-09-19', 'USD', 'UAH', 10000.5, 28.163466, 281648.737791],
 # ['2020-09-20', 'USD', 'UAH', 10000.5, 28.163455, 281648.630637],
 # ['2020-09-21', 'USD', 'UAH', 10000.5, 28.23733, 282387.419415],
 # ['2020-09-22', 'USD', 'UAH', 10000.5, 28.265772, 282671.854989]]
-# ** доп. задание. ввод данных должен приниматься парсингом аргументов, модуль
-# argparse.
-# Только --start_date опциональный параметр.
-# В итоге чтобы была возможность запустить приложение командой:
+# Optional: input must be accepted by argument parsing, module argparse.
+# Only --start_date is optional.
+# As a result, to be able to run the application with the command:
 # python exchange_rates.py USD UAH 100 --start_date 2020-09-18
-# В данном случае пользователя спрашивать не нужно.
+# In this case, the user does not need to be asked.
 
 import argparse
 import datetime
-import time
 import json
+import time
+
 import requests
 
 URL = 'https://api.exchangerate.host/convert'
 
 
 def initial_check():
+    """This function will check the input parameters "currency_from" and
+    "currency_to" """
     with open('symbols.json', 'r') as file:
         symbols_list = json.load(file)['symbols']
         if args.currency_from not in symbols_list:
@@ -51,6 +50,7 @@ def initial_check():
 
 
 def correct_dates():
+    """This function will check if the entered date is correct"""
     try:
         initial_date = datetime.datetime.strptime(args.start_date,
                                                   '%Y-%m-%d').date()
@@ -63,6 +63,7 @@ def correct_dates():
 
 
 def extract_info():
+    """This function will extract all necessary info and return output"""
     user_date = correct_dates()
     info_list = [['date', 'from', 'to', 'amount', 'rate', 'result']]
     while user_date <= datetime.datetime.utcnow().date():
@@ -88,7 +89,4 @@ if __name__ == '__main__':
                         default=datetime.datetime.utcnow().date())
     args = parser.parse_args()
 
-
 initial_check()
-
-
