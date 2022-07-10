@@ -49,8 +49,3 @@ my_bank.withdrawal_of_funds(129.50)
 
 print("List of Your transactions is: ", *my_bank.transaction, sep="\n")
 print("Your balance is: ", my_bank.check_balance())
-
-
-
-
-
