@@ -1,6 +1,6 @@
-# 2. Написать функцию которая определит является ли введенная строка
-# палиндромом (та которая читается одинаково с любой стороны), пример:
-# ШАЛАШ, КАЗАК, ДЕД, ДОХОД, 13231 и т.д.
+# Write a function that will determine if the input string is a palindrome
+# (one that reads the same on either side)
+# For example: 12321, ABBA, Hannah, level
 
 user_sentence = 'Mr. Owl ate my metal worm!'
 
