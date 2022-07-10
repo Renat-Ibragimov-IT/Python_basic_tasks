@@ -1,7 +1,7 @@
 # There is a json file. Write a program that will read it and calculate
 # the total duration of all the tracks on the album.
 # Basic case - will return the number of seconds.
-# * Return hours:minutes:seconds as a string. Example: '0:41:39'
+# * Return hours:minutes:seconds as a string. Example: '0:41:39'.
 
 import datetime
 import json
