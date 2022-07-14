@@ -10,29 +10,9 @@
 import re
 
 user_password = input('Please enter Your password: ')
-# Variant 1
 
 
 def check_password(password: str):
-    """This function will check password with many "if"=))"""
-    if not re.search(r'[a-z]', password):
-        print('Your password should contain at least one symbol "a-z"')
-    if not re.search(r'[A-Z]', password):
-        print('Your password should contain at least one symbol "A-Z"')
-    if not re.search(r'\d', password):
-        print('Your password should contain at least one digit')
-    if not re.search(r'[$#@\-+=]', password):
-        print('Your password should contain at least one special symbol')
-    if not re.search(r'.{8,}', password):
-        print('Your password length should be at least 8 symbols')
-    else:
-        return print('Your password is correct')
-
-
-# Variant 2
-
-
-def checks(password: str):
     """This function will check password without many "if"=)"""
     self_checks = {1: re.search(r'[a-z]', password),
                    2: re.search(r'[A-Z]', password),
@@ -54,4 +34,3 @@ def checks(password: str):
 
 
 check_password(user_password)
-checks(user_password)
