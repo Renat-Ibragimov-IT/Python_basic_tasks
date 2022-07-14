@@ -1,4 +1,4 @@
-# 3. Написать функцию которая вернет самое длинное слово в строке:
+# Write a function that will return the longest word in a string:
 # longest_word("What makes a good man") -> makes
 
 user_string = input("Please enter some sentence: ")

@@ -1,25 +1,12 @@
-# 2. Написать функцию которая будет частично скрывать e-mail, пример:
+# Write a function that will partially hide the e-mail, for example:
 # hide_email(somebody_email@gmail.com) -> em***@**il.com
 
 import random
 
 user_email = input("Please enter your email: ")
-# Variant 1
 
 
-def hidden_email(email: str) -> str:
-    """This function will return email with "***" in last part of name part and
-                                with "**" in first part of contracts part"""
-    return user_email.split('@')[0][:-3] + "***@**" + \
-                                           user_email.split('@')[1][2:]
-
-
-print(hidden_email(user_email))
-
-# Variant 2
-
-
-def hidden_email_1(email: str, qty_of_asterix: int) -> str:
+def hidden_email(email: str, qty_of_asterix: int) -> str:
     """This function will return email with random symbols replaced
                                                                 with "*"."""
     index = [key for key, value in enumerate(email) if not value == '@']
@@ -30,4 +17,4 @@ def hidden_email_1(email: str, qty_of_asterix: int) -> str:
     return "".join(lst)
 
 
-print(hidden_email_1(user_email, 10))
+print(hidden_email(user_email, 10))
