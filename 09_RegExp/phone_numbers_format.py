@@ -6,7 +6,7 @@
 # 063-99999-99, output: (+38) 063 999-99-99
 # +3806399-999-99, output: (+38) 063 999-99-99
 # 380639999999, output: (+38) 063 999-99-99
-# Если что-то не так с номером - пишет 'Failed to recognize number'.
+# If something is wrong with the number - writes 'Failed to recognize number'.
 import re
 user_number = input("Please enter Your phone number: ")
 

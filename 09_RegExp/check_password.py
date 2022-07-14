@@ -1,19 +1,20 @@
-# 3. Вводимый пользователем пароль должен соответсвовать требованиям,
-# 	1. Как минимум 1 символ от a-z
-# 	2. Как минимум 1 символ от A-Z
-# 	3. Как минимум 1 символ от 0-9
-# 	4. Как минимум 1 символ из $#@-+=
-# 	5. Минимальная длина пароля 8 символов.
-# Программа принимает на ввод строку, в случае если пароль не верный -
-# пишет какому требованию не соответствует и спрашивает снова,
-# в случае если верный - пишет 'Password is correct'.
+# The password entered by the user must meet the requirements
+# 1. At least 1 character from a-z
+# 2. At least 1 character from A-Z
+# 3. At least 1 character from 0-9
+# 4. At least 1 character from $#@-+=
+# 5. The minimum password length is 8 characters.
+# The program accepts a string as input, if the password is not correct -
+# it writes what requirement it does not meet, if it is correct
+# - it writes 'Password is correct'.
 import re
 
 user_password = input('Please enter Your password: ')
 
 
 def check_password(password: str):
-    """This function will check password without many "if"=)"""
+    """This function will check if the entered password meets
+    all requirements"""
     self_checks = {1: re.search(r'[a-z]', password),
                    2: re.search(r'[A-Z]', password),
                    3: re.search(r'\d', password),
