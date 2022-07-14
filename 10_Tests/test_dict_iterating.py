@@ -1,14 +1,12 @@
 import unittest
-import Homework6_1
+import dict_iterating
 
 
-class HomeworkTest(unittest.TestCase):
+class TestDictIterating(unittest.TestCase):
     def test_merging_into_dict(self):
-        self.assertEqual(Homework6_1.merging_into_dict((1, 2, 3),
+        self.assertEqual(dict_iterating.merging_into_dict((1, 2, 3),
                     ('one', 'two', 'three')), {1: 'one', 2: 'two', 3: 'three'})
 
 
 if __name__ == '__main__':
     unittest.main()
-
-
