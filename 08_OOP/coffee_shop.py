@@ -54,7 +54,8 @@ class Store:
         return sum(item.price for item in self.products)
 
     def sell_a_product(self, product: str):
-        """This function will calculate ov"""
+        """This function will calculate total amount after the
+        sale of the product"""
         for index, item in enumerate(self.products):
             if product.lower() == item.name.lower():
                 self.products.pop(index)

@@ -1,17 +1,17 @@
-# 1. Описать класс "Банковский счет", атрибуты у которого:
-#    * имя аккаунта - str
-#    * уникальный id (uuid)
-#    * баланс float
-#    * транзакции (список)
-#    Методы
-#    * депозит средств
-#    * вывод средств
-#    * получить баланс
-#    При изменении баланса записывать в транзакции (сумма, тип операции,
-#    текущая_дата)
-#    * доп. добавить и учитывать банковские комиссии (1%)
-from uuid import uuid4
+# 1. Describe the "Bank account" class, whose attributes are:
+# * account name - str
+# * unique id (uuid)
+# * float balance
+# * transactions (list)
+# Methods
+# * deposit funds
+# * withdraw funds
+# * get balance
+# When changing the balance, write in transactions
+# (amount, operation type, current_date)
+# * Optional: add and account for bank fees (1%)
 import datetime
+from uuid import uuid4
 
 
 class BankAccount:
@@ -48,4 +48,4 @@ my_bank.deposit_funds(1584)
 my_bank.withdrawal_of_funds(129.50)
 
 print("List of Your transactions is: ", *my_bank.transaction, sep="\n")
-print("Your balance is: ", my_bank.check_balance())
+print(f'Your balance is: {my_bank.check_balance()}')
