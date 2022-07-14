@@ -70,4 +70,3 @@ class House:
 odessa = City('Odessa')
 odessa.print_table()
 odessa.total_residents()
-
