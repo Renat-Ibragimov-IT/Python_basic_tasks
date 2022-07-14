@@ -1,8 +1,9 @@
 # Write a function that will determine if the input string is a palindrome
 # (one that reads the same on either side)
-# For example: 12321, ABBA, Hannah, level
+# For example: 12321, ABBA, Hannah, level, eye, etc.
 
-user_sentence = 'Mr. Owl ate my metal worm!'
+# user_sentence = 'Mr. Owl ate my metal worm!'
+user_sentence = input('Please enter some word, number or sentence: ')
 
 
 def palindrome(string: str) -> str:
@@ -14,4 +15,3 @@ def palindrome(string: str) -> str:
 
 
 print(f'{"Your sentence is: "}{palindrome(user_sentence)}')
-
